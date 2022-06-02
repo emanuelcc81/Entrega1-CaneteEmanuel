@@ -1,0 +1,29 @@
+{% extends "padre.html" %}
+
+{%  load static %}
+
+
+{% block contenido %}
+    
+<h1 style="color:white" text-align="center">Lista proveedores</h1> 
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" style="color: white">id</th>
+            <th scope="col" style="color: white">Nombre</th>
+            <th scope="col" style="color: white">Telefono</th>          
+          </tr>
+        </thead>
+        <tbody>
+            {% for n in proveedores %}
+            <tr>
+                <th scope="row" style="color: white">{{n.id}}</th>
+                <td style="color: white">{{n.nombre}}</td>
+                <td style="color: white">{{n.telefono}}</td>
+            </tr>
+            {% endfor %}        
+        
+        </tbody>
+      </table>
+
+{% endblock %}
